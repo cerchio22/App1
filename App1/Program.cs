@@ -7,26 +7,26 @@ namespace GameExample
     {
         static void Main(string[] args)
         {
-            // Welcome message and instructions
+            // instructies van de game
             Console.WriteLine("Welkom bij de raadsel game!");
             Console.WriteLine("Ik denk aan een nummer tussen 1 en 10. Kan jij raden wat het getal is?");
 
-            // Generate a random number between 1 and 10
+            // Genereren van de nummers 1 tot en met 10
             Random random = new Random();
             int correctAnswer = random.Next(1, 11);
 
-            // Loop until the player guesses the correct answer
+            // Loop totdat de player het antwoord heeft geraden
             bool correct = false;
             while (!correct)
             {
-                // Get player's guess
+                // ophalen van het antwoord van de player
                 Console.WriteLine("Voer je antwoord hier uit:");
                 string input = Console.ReadLine();
 
-                // Convert player's guess to an integer
+                // Converteer de gok van de speler naar een geheel getal
                 if (int.TryParse(input, out int guess))
                 {
-                    // Check if the guess is correct
+                    // Check of het antwoord goed is
                     if (guess == correctAnswer)
                     {
                         Console.WriteLine("Gefeliciteerd, je hebt het antwoord geraden.");
